@@ -58,16 +58,25 @@ unsigned char usart_receive(void)
 int main(void)
 {
     // Your main code here
-    unsigned char modaya = "S";
-    EEPROMwrite(0x00, modaya);
-    char result = EEPROMRead(0x00);
-    char str[10];
-    sprintf(str, "%d", result);
+    unsigned char message[] = "Hello World!";
+    int length = strlen(message);
+    for (int i = 0; i < length; i++)
+    {
+        EEPROMwrite(0x00 + i, message[i]);
+    }
+
+    char result[100];
+    for (int i = 0; i < length; i++)
+    {
+        result[i] = EEPROMRead(0x00 + i);
+    }
+    result[length] = '\0'; // Don't forget to null-terminate the string
+
     usart_init();
 
-    for (int i = 0; i < strlen(str); i++)
+    for (int i = 0; i < length; i++)
     {
-        usart_send(str[i]);
+        usart_send(result[i]);
     }
 
     while (1)
