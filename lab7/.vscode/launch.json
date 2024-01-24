@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/#Pera/Academic/Semester 5/CO321 - Embedded Systems/Labs/Lab 07",
-      "program": "d:/#Pera/Academic/Semester 5/CO321 - Embedded Systems/Labs/Lab 07/build/Debug/outDebug",
+      "cwd": "c:/Users/pasin/OneDrive/Documents/GitHub/SEM5-CO321-LABS/lab7",
+      "program": "c:/Users/pasin/OneDrive/Documents/GitHub/SEM5-CO321-LABS/lab7/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
